@@ -1,5 +1,4 @@
-NAME	=   libasm
-LIB		=   $(NAME).a
+NAME	=   libasm.a
 SRCS	=	ft_strlen.s \
 			ft_strcpy.s \
 			ft_strcmp.s \
@@ -13,16 +12,19 @@ LIBC	= ar -rcs
 	nasm -f macho64 $< -o $@ 
 
 $(NAME): ${OBJS}
-	${LIBC} $(LIB) $(OBJS)
+	${LIBC} $(NAME) $(OBJS)
 
 all: $(NAME)
 
 clean:
-	rm -f $(NAME) $(OBJS) $(OBJS_B)
-    
+	rm -f $(OBJS)
+	
 fclean: clean
-	$(RM) $(NAME)
-    
+	rm -f $(NAME)
+
+test:
+	gcc -Wall -Wextra -Werror main.c tests*.c libasm.a 
+
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean test re
