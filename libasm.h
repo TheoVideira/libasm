@@ -6,7 +6,7 @@
 /*   By: tvideira <tvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/27 17:57:43 by tvideira          #+#    #+#             */
-/*   Updated: 2019/12/29 18:30:11 by tvideira         ###   ########.fr       */
+/*   Updated: 2020/01/14 04:26:42 by tvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,8 @@
 size_t	ft_strlen(const char *s);
 char	*ft_strcpy(char *dst, const char *src);
 int		ft_strcmp(const char *s1, const char *s2);
+ssize_t	ft_write(int filedes, const void *buf, size_t nbyte);
+ssize_t	ft_read(int fildes, void *buf, size_t nbyte);
+char	*ft_strdup(const char *s1);
 
 #endif
