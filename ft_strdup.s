@@ -1,19 +1,19 @@
 section .text						; code section
-	global _ft_strdup				; make label available to linker
-	extern _malloc
-	extern _ft_strlen
-	extern _ft_strcpy
+	global ft_strdup				; make label available to linker
+	extern malloc
+	extern ft_strlen
+	extern ft_strcpy
 
-_ft_strdup:							; standard  gcc  entry point
+ft_strdup:							; standard  gcc  entry point
 	push	rdi
-	call	_ft_strlen
+	call	ft_strlen
 	inc		rax
 	mov		rdi, rax
-	call	_malloc
+	call	malloc
 	pop		rsi
 	cmp		rax, 0
 	je		end
 	mov		rdi, rax
-	call	_ft_strcpy
+	call	ft_strcpy
 end:
 	ret

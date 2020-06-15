@@ -1,7 +1,7 @@
 section .text						; code section
-	global _ft_strcpy				; make label available to linker
+	global ft_strcpy				; make label available to linker
 
-_ft_strcpy:							; standard  gcc  entry point
+ft_strcpy:							; standard  gcc  entry point
 	mov		rax, rdi				; init rax to original pointer of rdi (dst)
 loop:								; start loop
 	mov		rcx, [rsi]				; dereference rsi (src) into rcx

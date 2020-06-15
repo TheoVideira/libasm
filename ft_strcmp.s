@@ -1,7 +1,7 @@
 section .text
-	global _ft_strcmp
+	global ft_strcmp
 
-_ft_strcmp:
+ft_strcmp:
 	mov		dl, [rdi]
 	mov		cl, [rsi]
 	cmp		dl, byte 0
@@ -12,7 +12,7 @@ _ft_strcmp:
 	jne		end
 	inc		rdi
 	inc		rsi
-	jmp		_ft_strcmp
+	jmp		ft_strcmp
 end:
 	movzx	rax, dl
 	movzx	rdx, cl
