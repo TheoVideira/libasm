@@ -8,7 +8,7 @@ SRCS	=	ft_strlen.s \
 			ft_strdup.s
 OBJS	=	$(SRCS:.s=.o)
 
-C_SRCS	=	main.c tests.c test_2.c
+C_SRCS	=	main.c tests.c tests_2.c
 
 CCFLAGS	=	-Wall -Wextra -Werror
 SFLAGS	=	-f elf64
