@@ -30,7 +30,7 @@ fclean: clean
 	rm -f a.out
 
 test:
-	gcc $(CCFLAGS) $(C_SRCS) $(NAME)
+	clang $(CCFLAGS) $(C_SRCS) $(NAME)
 
 re: fclean all
 
